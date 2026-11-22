@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1021" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#05070e" />
+    </linearGradient>
+
+    <!-- Mesh Glow Gradients -->
+    <radialGradient id="glowPurple" cx="15%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="85%" cy="75%" r="45%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowPink" cx="65%" cy="20%" r="35%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Title Linear Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+    </pattern>
+
+    <style>
+      /* Ambient dynamic animated background elements */
+      @keyframes floatSlow1 {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1.5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      @keyframes floatSlow2 {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(10px) rotate(-1.5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.75; }
+      }
+      @keyframes orbitParticle {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 240; }
+      }
+
+      .floating-bg-left {
+        animation: floatSlow1 7s ease-in-out infinite;
+      }
+      .floating-bg-right {
+        animation: floatSlow2 8.5s ease-in-out infinite;
+      }
+      .pulsing-mesh {
+        animation: pulseGlow 5s ease-in-out infinite;
+      }
+      .network-line {
+        stroke-dasharray: 6 8;
+        animation: orbitParticle 12s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background Layer -->
+  <rect width="1200" height="360" fill="url(#bgGradient)" />
+  <rect width="1200" height="360" fill="url(#grid)" />
+
+  <!-- Animated Glowing Mesh Pods (Underneath) -->
+  <circle cx="180" cy="90" r="280" fill="url(#glowPurple)" class="pulsing-mesh" />
+  <circle cx="1020" cy="270" r="300" fill="url(#glowCyan)" class="pulsing-mesh" />
+  <circle cx="780" cy="80" r="220" fill="url(#glowPink)" class="pulsing-mesh" />
+
+  <!-- Background Animated Network Lines (Layered safely behind text) -->
+  <g opacity="0.3" class="network-line">
+    <path d="M 120,310 Q 300,280 480,310 T 840,310 T 1100,290" fill="none" stroke="#6366f1" stroke-width="2" />
+    <path d="M 80,60 Q 280,100 500,60 T 920,70 T 1140,50" fill="none" stroke="#06b6d4" stroke-width="1.8" />
+  </g>
+
+  <!-- Side Floating Pill Cards (Positioned in low corners / periphery to keep center clear) -->
+  <g class="floating-bg-left" opacity="0.75">
+    <rect x="50" y="275" width="135" height="42" rx="21" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="72" cy="296" r="6" fill="#38bdf8" />
+    <text x="88" y="301" fill="#94a3b8" font-size="13" font-weight="600">⚡ Jamstack</text>
+  </g>
+
+  <g class="floating-bg-right" opacity="0.75">
+    <rect x="1015" y="275" width="135" height="42" rx="21" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="1037" cy="296" r="6" fill="#c084fc" />
+    <text x="1053" y="301" fill="#94a3b8" font-size="13" font-weight="600">🌐 Edge SSG</text>
+  </g>
+
+  <!-- Dynamic Status Tag / Badge at Top Center -->
+  <g transform="translate(460, 48)">
+    <rect width="280" height="32" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#475569" stroke-width="1" />
+    <circle cx="18" cy="16" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="32" y="21" fill="#cbd5e1" font-size="12" font-weight="600" letter-spacing="1">CURATED DEVELOPER DIRECTORY</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: Header Title & Subtitle (Clear, crisp, unblocked) -->
+  <g transform="translate(600, 142)" text-anchor="middle">
+    <!-- Main Title -->
+    <text x="0" y="0" fill="url(#textGrad)" font-size="44" font-weight="900" letter-spacing="-0.5" filter="drop-shadow(0px 3px 14px rgba(0,0,0,0.7))">
+      Static Site Generators &amp; Portfolios
+    </text>
+
+    <!-- Subtitle Line 1 -->
+    <text x="0" y="44" fill="#f8fafc" font-size="19" font-weight="600" letter-spacing="0.2">
+      The Ultimate Ecosystem of Jamstack Engines, Edge Hosting &amp; Developer Showcases
+    </text>
+
+    <!-- Subtitle Line 2: Description tags -->
+    <text x="0" y="76" fill="#94a3b8" font-size="14" font-weight="400">
+      Astro • Next.js • Hugo • Eleventy • Zola • Docusaurus • Vercel • Netlify • Cloudflare
+    </text>
+  </g>
+
+  <!-- Bottom Metric Highlights Bar -->
+  <g transform="translate(240, 266)">
+    <!-- Metric 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="46" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1" />
+      <text x="105" y="20" fill="#38bdf8" font-size="14" font-weight="800" text-anchor="middle">30+ OPEN SOURCE</text>
+      <text x="105" y="37" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">Ranked by Stargazers</text>
+    </g>
+
+    <!-- Metric 2 -->
+    <g transform="translate(255, 0)">
+      <rect width="210" height="46" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1" />
+      <text x="105" y="20" fill="#a855f7" font-size="14" font-weight="800" text-anchor="middle">TOP SAAS PLATFORMS</text>
+      <text x="105" y="37" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">Valuations &amp; Free Tiers</text>
+    </g>
+
+    <!-- Metric 3 -->
+    <g transform="translate(510, 0)">
+      <rect width="210" height="46" rx="8" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1" />
+      <text x="105" y="20" fill="#34d399" font-size="14" font-weight="800" text-anchor="middle">ZERO VENDOR LOCK-IN</text>
+      <text x="105" y="37" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">Local-First &amp; Markdown Driven</text>
+    </g>
+  </g>
+</svg>
