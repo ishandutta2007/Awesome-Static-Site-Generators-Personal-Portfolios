@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Static-Site-Generators-Personal-Portfolios/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Static-Site-Generators-Personal-Portfolios?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Static-Site-Generators-Personal-Portfolios/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Static-Site-Generators-Personal-Portfolios?style=social" alt="GitHub_Stars"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Static-Site-Generators-Personal-Portfolios/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Static-Site-Generators-Personal-Portfolios?style=social" alt="GitHub Forks"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
@@ -60,7 +60,7 @@ The following hosted platforms provide automated Git-driven deployments, worldwi
 
 Curated open-source static site generators, documentation builders, headless CMS engines, and portfolio themes. Ranked in descending order by GitHub stargazer count. 🌟
 
-| Project | GitHub Stars | Primary Language / Stack | Description & Highlights |
+| Project | GitHub_Stars | Primary Language / Stack | Description & Highlights |
 | :--- | :--- | :--- | :--- |
 | **[Next.js](https://github.com/vercel/next.js)** | [![Stars](https://img.shields.io/github/stars/vercel/next.js?style=social&color=white)](https://github.com/vercel/next.js/stargazers) | React / TypeScript / Rust | The industry standard React framework featuring Static Site Generation (`output: 'export'`), Server-Side Rendering, and Turbopack compiler. ⚛️ |
 | **[Hugo](https://github.com/gohugoio/hugo)** | [![Stars](https://img.shields.io/github/stars/gohugoio/hugo?style=social&color=white)](https://github.com/gohugoio/hugo/stargazers) | Go | One of the fastest static site generators in existence; compiles thousands of Markdown files into static HTML in fractions of a second. ⚡ |
@@ -119,7 +119,7 @@ Choosing the optimal stack depends on your templating preference, build speed re
 1. Fork this repository 🍴.
 2. Create a descriptive branch: `git checkout -b add/my-awesome-tool` 🌿.
 3. Add the project or platform to the respective table keeping the sorted criteria intact ✍️.
-4. Ensure the GitHub stars badge follows the format:
+4. Ensure the GitHub_Stars_Badge follows the format:
    ```markdown
    [![Stars](https://img.shields.io/github/stars/<owner>/<repo>?style=social&color=white)](https://github.com/<owner>/<repo>/stargazers)
    ```
